@@ -145,23 +145,15 @@
     <div class="scrolling-ticker">
         <div class="scrolling-ticker-box">
             <div class="scrolling-content">
-                <span><i class="fa-solid fa-circle"></i>Web Development</span>
-                <span><i class="fa-solid fa-circle"></i>Game Development</span>
-                <span><i class="fa-solid fa-circle"></i>App Development</span>
-                <span><i class="fa-solid fa-circle"></i>Digital Marketing</span>
-                <span><i class="fa-solid fa-circle"></i>SEO Optimization</span>
-                <span><i class="fa-solid fa-circle"></i>Graphics Design</span>
-                <span><i class="fa-solid fa-circle"></i>Networking Services</span>
+                @foreach($services as $service)
+                    <span><i class="fa-solid fa-circle"></i>{{$service['name']}}</span>
+                @endforeach
             </div>
 
             <div class="scrolling-content">
-                <span><i class="fa-solid fa-circle"></i>Web Development</span>
-                <span><i class="fa-solid fa-circle"></i>Game Development</span>
-                <span><i class="fa-solid fa-circle"></i>App Development</span>
-                <span><i class="fa-solid fa-circle"></i>Digital Marketing</span>
-                <span><i class="fa-solid fa-circle"></i>SEO Optimization</span>
-                <span><i class="fa-solid fa-circle"></i>Graphics Design</span>
-                <span><i class="fa-solid fa-circle"></i>Networking Services</span>
+                @foreach($services as $service)
+                    <span><i class="fa-solid fa-circle"></i>{{$service['name']}}</span>
+                @endforeach
             </div>
         </div>
     </div>

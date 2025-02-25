@@ -10,6 +10,7 @@ use Livewire\Component;
 class About extends Component
 {
     public $data;
+    public $services;
     public function mount()
     {
         $this->data = AboutPage::first();
@@ -23,6 +24,8 @@ class About extends Component
         OpenGraph::addImage(asset('storage/' . $this->data->seo['og_image']));
         OpenGraph::setType($this->data->seo['og_type']);
         OpenGraph::setUrl($this->data->seo['og_url']);
+
+        $this->services = \App\Models\Service::select('name')->get();
     }
     public function render()
     {
